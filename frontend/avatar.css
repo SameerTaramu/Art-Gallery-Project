@@ -1,0 +1,55 @@
+.user-avatar-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .user-avatar {
+    width: 50px;
+    height: 50px;
+    background-color: #4caf50;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .user-avatar span {
+    font-family: Arial, sans-serif;
+  }
+  
+  .user-dropdown {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+  }
+  
+  .user-dropdown p {
+    margin: 0;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .user-dropdown button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .user-avatar-container:hover .user-dropdown {
+    display: block;
+  }
+  

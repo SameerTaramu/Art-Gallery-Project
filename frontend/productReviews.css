@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dashboard {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 200px;
+    background-color: #333;
+    color: white;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 10px 0;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .productReviewsContainer {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .productReviewsForm {
+    margin-bottom: 20px;
+  }
+  
+  .productReviewsForm div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .productReviewsForm input {
+    flex: 1;
+    padding: 8px;
+    margin-left: 10px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+  }
+  
+  #reviewsTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  #reviewsTable th, #reviewsTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  #reviewsTable th {
+    background-color: #f4f4f4;
+  }
+  
+  .greenColor {
+    color: green;
+  }
+  
+  .redColor {
+    color: red;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Reviews - Admin</title>
+  <link rel="stylesheet" href="productReviews.css">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Admin Panel</h2>
+      <ul>
+        <li><a href="/admin/dashboard">Dashboard</a></li>
+        <li><a href="/admin/products">Products</a></li>
+        <li><a href="/admin/reviews">Reviews</a></li>
+      </ul>
+    </div>
+
+    <!-- Reviews Section -->
+    <div class="productReviewsContainer">
+      <form id="productReviewsForm" class="productReviewsForm">
+        <h1 class="productReviewsFormHeading">ALL REVIEWS</h1>
+        <div>
+          <span>⭐</span>
+          <input
+            type="text"
+            id="productIdInput"
+            placeholder="Product Id"
+            required
+          />
+        </div>
+        <button id="searchReviewsBtn" type="submit">Search</button>
+      </form>
+
+      <table id="reviewsTable" class="hidden">
+        <thead>
+          <tr>
+            <th>Review ID</th>
+            <th>User</th>
+            <th>Comment</th>
+            <th>Rating</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Reviews will be dynamically populated -->
+        </tbody>
+      </table>
+
+      <h1 id="noReviewsMessage" class="hidden">No Reviews Found</h1>
+    </div>
+  </div>
+
+  <script src="productReviews.js"></script>
+</body>
+</html>

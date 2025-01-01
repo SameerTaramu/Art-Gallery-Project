@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="updateProduct.css">
+  <script defer src="updateProduct.js"></script>
+</head>
+<body>
+<form id="updateProductForm">
+    <h1>Update Product</h1>
+    <label>
+      Product Name:
+      <input type="text" id="productName" required />
+    </label>
+    <label>
+      Price:
+      <input type="number" id="productPrice" required />
+    </label>
+    <label>
+      Description:
+      <textarea id="productDescription" required></textarea>
+    </label>
+    <label>
+      Category:
+      <select id="productCategory" required>
+        <option value="">Choose Category</option>
+        <option value="Laptop">Laptop</option>
+        <option value="Footwear">Footwear</option>
+        <!-- Add more categories -->
+      </select>
+    </label>
+    <label>
+      Stock:
+      <input type="number" id="productStock" required />
+    </label>
+    <label>
+      Images:
+      <input type="file" id="productImages" accept="image/*" multiple />
+    </label>
+    <div id="imagePreview"></div>
+    <button type="submit">Update</button>
+  </form>
+</body>
+</html>
+  

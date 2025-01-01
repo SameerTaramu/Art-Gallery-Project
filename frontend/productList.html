@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product List - Admin</title>
+  <link rel="stylesheet" href="productList.css">
+</head>
+<body>
+  <div class="dashboard">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Admin Panel</h2>
+      <ul>
+        <li><a href="/admin/dashboard">Dashboard</a></li>
+        <li><a href="/admin/products">Products</a></li>
+        <li><a href="/admin/orders">Orders</a></li>
+      </ul>
+    </div>
+
+    <!-- Product List -->
+    <div class="productListContainer">
+      <h1 id="productListHeading">ALL PRODUCTS</h1>
+      <table id="productTable">
+        <thead>
+          <tr>
+            <th>Product ID</th>
+            <th>Name</th>
+            <th>Stock</th>
+            <th>Price</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Rows will be populated dynamically -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="productList.js"></script>
+</body>
+</html>
