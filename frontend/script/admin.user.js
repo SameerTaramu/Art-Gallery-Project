@@ -21,10 +21,11 @@ const displayAllUsers = async () => {
   const productsContainer = document.querySelector("#user-list");
   productsContainer.innerHTML = "";
 
-  users.forEach((user) => {
-    const RootDiv = document.createElement("tr");
-    RootDiv.classList.add("product-item");
-    const productItemHtml = `
+  if (users?.length > 0) {
+    users.forEach((user) => {
+      const RootDiv = document.createElement("tr");
+      RootDiv.classList.add("product-item");
+      const productItemHtml = `
             <td>${user._id}</td>
               <td>${user.name}</=>
               <td>${user.email}</td>
@@ -36,8 +37,9 @@ const displayAllUsers = async () => {
              </div>
              </td>
     `;
-    RootDiv.innerHTML = productItemHtml;
-    productsContainer.insertAdjacentElement("beforeend", RootDiv);
-  });
+      RootDiv.innerHTML = productItemHtml;
+      productsContainer.insertAdjacentElement("beforeend", RootDiv);
+    });
+  }
 };
 displayAllUsers();

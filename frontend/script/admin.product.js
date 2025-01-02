@@ -20,7 +20,7 @@ const displayAllProducts = async () => {
   const products = await fetchAllProducts();
   const productsContainer = document.querySelector(".product-list");
   productsContainer.innerHTML = "";
-  if (products?.length === 0) {
+  if (products?.length > 0) {
     products?.forEach((product) => {
       const RootDiv = document.createElement("tr");
       RootDiv.classList.add("product-item");
