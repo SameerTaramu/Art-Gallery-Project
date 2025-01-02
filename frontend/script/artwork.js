@@ -1,6 +1,6 @@
 const fetchAllArtworks = async () => {
   try {
-    const response = await axios.get("http://localhost:3000/api/products");
+    const response = await axios.get("http://localhost:3000/api/products/all");
     return response.data;
   } catch (error) {
     console.error(error);
@@ -11,7 +11,6 @@ const displayAllArtworks = async () => {
   const artworks = await fetchAllArtworks();
   const artworksContainer = document.querySelector("#wrapper");
   artworksContainer.innerHTML = "";
-
   artworks.forEach((artwork) => {
     const RootDiv = document.createElement("div");
     RootDiv.classList.add("box");
