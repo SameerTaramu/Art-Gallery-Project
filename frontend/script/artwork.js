@@ -1,6 +1,6 @@
 const fetchAllArtworks = async () => {
   try {
-    const response = await axios.get("http://localhost:3000/api/products");
+    const response = await axios.get("http://localhost:3000/api/products/all");
     return response.data;
   } catch (error) {
     console.error(error);
@@ -25,8 +25,14 @@ const displayAllArtworks = async () => {
         <span class="price">Rs: ${artwork.price}</span>
         <div class="rating">
           Rating: 
-          ${[...Array(5)].map((_, i) => 
-            `<span class="star" data-value="${i + 1}" style="cursor:pointer;">&#9733;</span>`).join("")}
+          ${[...Array(5)]
+            .map(
+              (_, i) =>
+                `<span class="star" data-value="${
+                  i + 1
+                }" style="cursor:pointer;">&#9733;</span>`
+            )
+            .join("")}
         </div>
         <a href="#" class="btn">Add To Cart</a>
       </div>
@@ -51,4 +57,3 @@ const displayAllArtworks = async () => {
 };
 
 displayAllArtworks();
-
