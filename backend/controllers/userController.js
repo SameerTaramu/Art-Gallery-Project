@@ -2,7 +2,7 @@ const User = require("../models/user");
 
 const getUsers = async (req, res) => {
   try {
-    const user = await User.find({}).populate("owner");
+    const user = await User.find({});
     res.status(200).json(user);
   } catch (error) {
     res.status(500).json({ message: error.message });
@@ -55,9 +55,9 @@ const deleteUser = async (req, res) => {
 };
 
 module.exports = {
-    getUsers,
-    getUser,
-    createUser,
-    updateUser,
-    deleteUser,
+  getUsers,
+  getUser,
+  createUser,
+  updateUser,
+  deleteUser,
 };
