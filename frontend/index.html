@@ -10,7 +10,6 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js" referrerpolicy="no-referrer"></script>
     <script src="./utils/methods.js"></script>
     <script defer src="./script/upload.js"></script>
-    <script src="./script/index.js" defer></script>
     <script defer src="./script/login.js"></script>
     <script defer src="./script/avatar.js"></script>
 
@@ -23,15 +22,14 @@
             <a href="artwork.html">Artwork</a>
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact</a>
+            
         </nav>
         <div class="icons">
             <div class="fa fa-bars" id="menu-btn"></div>
-            <!-- <div class="fa fa-shopping-cart" id="cart-btn"><span>0</span></div> -->
             <div class="fa fa-user" id="user-btn"></div>
             <div class="fa-solid fa-upload" id="upload-btn"></div>
           
         </div>
-        
           <div class="avatar-container">
             <div class="avatar" onclick="toggleDropdown()">
             
@@ -39,22 +37,11 @@
             <div id="dropdownMenu" class="dropdown hidden">
                 <div class="userDetails">
                 </div>
-              <!-- <div class="email">user@example.com</div> -->
               <button class="logout-button" onclick="handleLogout()">Logout</button>
             </div>
           </div>
           <div class="userDetails">
             </div>
-        <!-- <div class="shopping-cart">
-            <div class="head">My Cart</div>
-            <div class="cart-content">
-            </div>
-            <div class="foot">
-                <div class="total">Total</div>
-                <div class="total-price">Rs 0</div>
-            </div>
-            <button type="button" class="btn-buy">Buy Now</button>
-        </div> -->
         <form action="#" class="login-form" id="login-section">
             <h3>login now</h3>
             <input type="email" placeholder="your email" id="email" class="box">
@@ -74,7 +61,9 @@
                     <textarea id="artwork-description" name="name" required
                         placeholder="Enter description"></textarea>
                 <label for="artwork-price">Price:</label>
-                <input type="text" id="artwork-price"  name="price" required placeholder="Enter price">
+                <input type="number" id="artwork-price"  name="price" required placeholder="Enter price" min="0" >
+                <label for="artwork-quantity">Quantity:</label>
+                <input type="number" id="artwork-quantity" name="quantity" required placeholder="Enter Quantity" min="0">
                 <label for="artwork-type">Type of Artwork:</label>
                 <select id="artwork-type" name="type" required>
                     <option value="drawing">Drawing</option>
@@ -88,17 +77,15 @@
             </form>
         </section>
     </header>
-    <section class="home">
+    <section class="hero" id="home">
         <div class="content">
-            <h3>Discover Art<span> You Love From </span>This Online Gallery</h3>
+            <h1>Discover the Beauty of Art</h1>
+            <p>Explore our exclusive collection of stunning artworks.</p>
+            <div class="shop-now-container">
+                <button class="shop-now-button" id="shopNowButton">Shop Now</button>
+            </div>
         </div>
     </section>
-    <!-- <section class="featured-artworks">
-        <div class="arts">
-          
-            
-        </div>
-    </section> -->
     <section class="features" id="Features">
         <h1 class="heading"> Our <span>Features</span> </h1>
         <div class="box-container">
@@ -148,9 +135,15 @@
         <div class="footer-bottom">
             <p>&copy; 2024 Online Art Gallery. All rights reserved.</p>
             <div class="social">
-                <a href=""><i class="fab fa-facebook-f"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our LinkedIn profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram profile">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
         </div>
     </footer>

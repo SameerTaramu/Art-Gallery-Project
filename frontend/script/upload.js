@@ -6,6 +6,7 @@ const uploadProduct = async (e) => {
   const title = document.querySelector("#artwork-name").value;
   const description = document.querySelector("#artwork-description").value;
   const price = +document.querySelector("#artwork-price").value;
+  const quantity = +document.querySelector("#artwork-quantity").value;
   const category = document.querySelector("#artwork-type").value;
   const artworkImage = document.querySelector("#artwork-image").files[0];
   if(!user){
@@ -20,8 +21,6 @@ const uploadProduct = async (e) => {
       reader.onerror = (error) => reject(error);
     });
   };
-
-  
   let artworkImageBase64 = null;
   if (artworkImage) {
     try {
@@ -38,6 +37,7 @@ const uploadProduct = async (e) => {
     name: title,
     description: description,
     price: price,
+    quantity: quantity,
     category: category,
     owner: user.userId,
     image: artworkImageBase64, 

@@ -15,10 +15,19 @@ const handleRegister = async (e) => {
   });
 
   if (res.status === 200) {
+
     const userData = res.data;
     setUserInLocalStorage(userData);
-    window.location.reload();
     alert("logged in  successfully");
+    console.log(userData)
+
+    if(userData.isAdmin){
+      location.href="/frontend/panel.html"
+    }else{
+    location.reload();
+
+    }
+
   }
 };
 
