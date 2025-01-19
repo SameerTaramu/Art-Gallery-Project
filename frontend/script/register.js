@@ -14,6 +14,11 @@ const handleRegister = async (e) => {
     if (!nameRegex.test(username)) {
         return alert("Username must only contain letters and spaces.");
     }
+    
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+    if (!emailRegex.test(email)) {
+        return alert("Email must be a valid Gmail address (e.g., user@gmail.com).");
+    }
 
     const passwordRegex = /^(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
     if (!passwordRegex.test(password)) {

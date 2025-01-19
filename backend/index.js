@@ -5,14 +5,13 @@ const connectDb = require("./libs/db.js");
 const productRoute = require("./routes/product.route.js");
 const authRoutes = require("./routes/auth.js");
 const userRoutes = require("./routes/User.js")
-const cartRoutes = require("./routes/carts.js")
-const ratingsRoutes = require('./routes/ratings');
+//const orderRoutes = require("./routes/order.route.js")
+const cartRoutes = require("./routes/cart.route.js")
 const bodyParser = require("body-parser");
 require("dotenv").config();
 
 const app = express();
 connectDb(app);
-
 app.use(morgan("dev"));
 app.use(
   cors({
@@ -22,7 +21,6 @@ app.use(
   })
 );
 
-
 app.use(bodyParser.json({ limit: "10mb" }));
 app.use(bodyParser.urlencoded({ limit: "10mb", extended: true }));
 
@@ -31,14 +29,9 @@ app.use((req, res, next) => {
   next();
 });
 
-
 app.use("/api/products", productRoute);
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
-app.use("/api/carts", cartRoutes);
-app.use('/api/ratings', ratingsRoutes);
-
-
 app.get("/", (req, res) => {
   res.send("Hello from the API server");
 });

@@ -5,8 +5,6 @@ const uploadProduct = async (e) => {
   const user = getUserFromLocalStorage();
   const title = document.querySelector("#artwork-name").value;
   const description = document.querySelector("#artwork-description").value;
-  const price = +document.querySelector("#artwork-price").value;
-  const quantity = +document.querySelector("#artwork-quantity").value;
   const category = document.querySelector("#artwork-type").value;
   const artworkImage = document.querySelector("#artwork-image").files[0];
   if(!user){
@@ -36,8 +34,6 @@ const uploadProduct = async (e) => {
   const productData = {
     name: title,
     description: description,
-    price: price,
-    quantity: quantity,
     category: category,
     owner: user.userId,
     image: artworkImageBase64, 

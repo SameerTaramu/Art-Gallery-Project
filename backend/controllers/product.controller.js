@@ -53,7 +53,13 @@ const deleteProduct = async (req, res) => {
     res.status(200).json({ message: "product deleted successfully" });
   } catch (error) {}
 };
-
+const handleRateProduct = (req, res) => {
+  try {
+    const {}
+  } catch (error) {
+    
+  }
+}
 module.exports = {
   getProducts,
   getProduct,

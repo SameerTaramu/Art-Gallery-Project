@@ -192,20 +192,7 @@ section {
     right: 2rem;
     transition: 0.3s linear;
 }
-.shopping-cart {
-    position: absolute;
-    top: 100%;
-    right: -110%;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: var(--box-shadow);
-    width: 30rem;
-    background: white;
-}
-.shopping-cart.active {
-    right: 2rem;
-    transition: 0.3s linear;
-}
+
 .head{
     text-align: center;
     font-size: 2rem;
@@ -259,21 +246,6 @@ section {
     font-weight: 500;
 }
 
-.shopping-cart .btn-buy {
-    border: 0.1rem solid black;
-    margin-top: 1rem;
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    font-size: 1.3rem;
-    border-radius: 0.5rem;
-    color: var(--black);
-    cursor: pointer;
-    background: none;
-}
-.shopping-cart .btn-buy:hover {
-    background: var(--green);
-    color: white;
-}
 
 .login-form {
     width: 33rem;
@@ -420,6 +392,67 @@ section {
 .shop-now-button:hover {
     background-color: #45a049;
 }
+/* cart-section */
+.cart-sec {
+    padding: 30px;
+    background-color: #f4f4f4;
+    margin-top: 50px;
+  }
+  
+  .cart-sec table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+  }
+  
+  .cart-sec table thead {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .cart-sec table th,
+  .cart-sec table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .cart-sec table td img {
+    width: 80px;
+    height: auto;
+  }
+  
+  .cart-sec table td input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  
+  .cart-sec table td i {
+    color: red;
+    cursor: pointer;
+  }
+  
+  .cart-sec table td i:hover {
+    color: darkred;
+  }
+  
+  .cart-sec table .cart-but button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+  
+  .cart-sec table .cart-but button:hover {
+    background-color: #45a049;
+  }
+  
 
 .featured-artworks {
     margin-top: 10px;

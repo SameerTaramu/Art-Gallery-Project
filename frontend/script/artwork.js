@@ -48,11 +48,6 @@ const displayAllArtworks = async () => {
     <p>Artist Name: ${artwork.name}</p>
     <p>Description: ${artwork.description}</p>
     <p>Type: Drawing</p>
-    <span class="price">Rs: ${artwork.price}</span>
-    <div class="quantity">
-      <label for="quantity">Quantity: </label>
-      <input type="number" id="quantity" name="quantity" min="1" value="1" style="width: 30px;">
-    </div>
     <div class="rating">
       Rating: 
       ${[...Array(5)]
@@ -63,7 +58,6 @@ const displayAllArtworks = async () => {
         )
         .join("")}
     </div>
-    <a href="#" class="add-to-cart">Add To Cart</a>
   </div>
 `;
 

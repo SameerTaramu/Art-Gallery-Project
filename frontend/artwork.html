@@ -3,17 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <title> Online Art Gallery</title>
+    <title>Online Art Gallery</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./styles/artwork.css">
+    <link rel="stylesheet" href="./styles/cart.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js"
         referrerpolicy="no-referrer"></script>
     <script defer src="./script/artwork.js"></script>
-    <script defer src="./script/index.js"></script>
     <script defer src="./utils/cart.js"></script>
 </head>
+
 <body>
     <header class="header">
         <a href="index.html" class="logo">Online Art Gallery</a>
@@ -23,26 +24,23 @@
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact</a>
         </nav>
-        <div id="cart-icon" class="cart-icon">
-            <i class="fas fa-shopping-cart"></i> <span id="cart-count">0</span>
-        </div>
     </header>
+
     <section class="products" id="products">
         <h1 class="heading"> Our <span>Artworks</span></h1>
         <div class="product-slider">
             <div class="wrapper" id="wrapper">
-
             </div>
         </div>
     </section>
+
     <footer>
         <div class="footer-content">
             <div class="footer-section about">
                 <h3>About Us</h3>
-                <p>At our Online Art Gallery we are dedicated to showcasing exceptional artworks from talented artists.
+                <p>At our Online Art Gallery, we are dedicated to showcasing exceptional artworks from talented artists.
                 </p>
             </div>
-
             <div class="footer-section links">
                 <h3>Quick Links</h3>
                 <ul>
@@ -50,27 +48,24 @@
                     <li><a href="about.html">About Us</a></li>
                     <li><a href="artwork.html">Artworks</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
-
                 </ul>
             </div>
-
             <div class="footer-section contact">
                 <h3>Contact Us</h3>
-                <p>Email: abcde@gmail.com</a></p>
+                <p>Email: abcde@gmail.com</p>
                 <p>Phone: 9800000000</p>
                 <p>Middle Street, Butwal, Rupendehi, 32907</p>
             </div>
         </div>
-
         <div class="footer-bottom">
             <p>&copy; 2024 Online Art Gallery. All rights reserved.</p>
             <div class="social">
-                <a href=""><i class="fab fa-facebook-f"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
     </footer>
 </body>
-<script src="script.js"></script>
+
 </html>
