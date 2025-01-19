@@ -53,11 +53,47 @@ const deleteProduct = async (req, res) => {
     res.status(200).json({ message: "product deleted successfully" });
   } catch (error) {}
 };
-const handleRateProduct = (req, res) => {
+const handleRateProduct =async (req, res) => {
+  const { id } = req.params; // Product ID
+  const { userId, rating } = req.body; // User ID and rating
+
+  if (!mongoose.Types.ObjectId.isValid(id) || !mongoose.Types.ObjectId.isValid(userId)) {
+    return res.status(400).json({ message: "Invalid product or user ID" });
+  }
+
+  if (!rating || rating < 1 || rating > 5) {
+    return res.status(400).json({ message: "Rating must be a number between 1 and 5" });
+  }
+
   try {
-    const {}
+    const product = await Product.findById(id);
+    if (!product) {
+      return res.status(404).json({ message: "Product not found" });
+    }
+
+    const existingRatingIndex = product.ratings.findIndex((r) => r.user.toString() === userId);
+
+    if (existingRatingIndex !== -1) {
+      // Update the existing rating
+      product.ratings[existingRatingIndex].rating = rating;
+    } else {
+      // Add a new rating
+      product.ratings.push({ user: userId, rating });
+    }
+
+    // Recalculate average rating
+    const totalRatings = product.ratings.reduce((acc, r) => acc + r.rating, 0);
+    product.averageRating = totalRatings / product.ratings.length;
+
+    await product.save();
+
+    res.status(200).json({
+      message: "Rating updated successfully",
+      product,
+    });
   } catch (error) {
-    
+    console.error(error);
+    res.status(500).json({ message: "Server error" });
   }
 }
 module.exports = {
@@ -66,4 +102,5 @@ module.exports = {
   createProduct,
   updateProduct,
   deleteProduct,
+  handleRateProduct
 };

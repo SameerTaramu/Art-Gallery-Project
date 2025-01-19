@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,59 +8,59 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js" referrerpolicy="no-referrer"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.8/axios.min.js"
+        referrerpolicy="no-referrer"></script>
     <script src="./utils/methods.js"></script>
     <script defer src="./script/upload.js"></script>
     <script defer src="./script/login.js"></script>
     <script defer src="./script/avatar.js"></script>
 
 </head>
+
 <body>
     <header class="header">
-        <a href="index.html" class="logo">Art Gallery</a>   
+        <a href="index.html" class="logo">Art Gallery</a>
         <nav class="navbar">
             <a href="index.html">Home</a>
             <a href="artwork.html">Artwork</a>
             <a href="about.html">About Us</a>
             <a href="contact.html">Contact</a>
-            
+
         </nav>
         <div class="icons">
             <div class="fa fa-bars" id="menu-btn"></div>
             <div class="fa fa-user" id="user-btn"></div>
             <div class="fa-solid fa-upload" id="upload-btn"></div>
-          
+
         </div>
-          <div class="avatar-container">
+        <div class="avatar-container">
             <div class="avatar" onclick="toggleDropdown()">
-            
+
             </div>
             <div id="dropdownMenu" class="dropdown hidden">
                 <div class="userDetails">
                 </div>
-              <button class="logout-button" onclick="handleLogout()">Logout</button>
+                <button class="logout-button" onclick="handleLogout()">Logout</button>
             </div>
-          </div>
-          <div class="userDetails">
-            </div>
+        </div>
+        <div class="userDetails">
+        </div>
         <form action="#" class="login-form" id="login-section">
             <h3>login now</h3>
             <input type="email" placeholder="your email" id="email" class="box">
-            <input type="password" placeholder="enter password"  id="password" class="box">
+            <input type="password" placeholder="enter password" id="password" class="box">
             <P>Don't Have An Account <a href="#" id="reg-box">Register Now></a></P>
             <input type="submit" value="Login Now" class="btn">
         </form>
         <section class="upload-section">
             <h2>Upload Your Artwork</h2>
             <form action="#" id="upload-form" enctype="multipart/form-data">
-            
-            
+
+
                 <label for="artwork-description">Name:</label>
-                <textarea id="artwork-name" name="name" required
-                    placeholder="Enter name"></textarea>
-                    <label for="artwork-description">Description:</label>
-                    <textarea id="artwork-description" name="name" required
-                        placeholder="Enter description"></textarea>
+                <textarea id="artwork-name" name="name" required placeholder="Enter name"></textarea>
+                <label for="artwork-description">Description:</label>
+                <textarea id="artwork-description" name="name" required placeholder="Enter description"></textarea>
                 <label for="artwork-type">Type of Artwork:</label>
                 <select id="artwork-type" name="type" required>
                     <option value="drawing">Drawing</option>
@@ -88,17 +89,20 @@
             <div class="box">
                 <img src="image/art-img.png">
                 <h3>Original And Authentic</h3>
-                <p>Our online art gallery offers a carefully curated selection of original and authentic artwork created by talented artists.</p>
+                <p>Our online art gallery offers a carefully curated selection of original and authentic artwork created
+                    by talented artists.</p>
             </div>
             <div class="box">
                 <img src="image/art-img-1.png">
                 <h3>24/7 Services</h3>
-                <p> Day or night, our gallery is open to bring the beauty of art to your life—discover, shop, and connect with art 24/7.</p>
+                <p> Day or night, our gallery is open to bring the beauty of art to your life—discover, shop, and
+                    connect with art 24/7.</p>
             </div>
             <div class="box">
                 <img src="image/art-img-2.png">
                 <h3>Easy And Secure Payments</h3>
-                <p> Our easy payment system ensures you can complete your purchase with confidence. Buying art has never been this easy!</p>
+                <p> Our easy payment system ensures you can complete your purchase with confidence. Buying art has never
+                    been this easy!</p>
             </div>
         </div>
     </section>
@@ -131,13 +135,16 @@
         <div class="footer-bottom">
             <p>&copy; 2024 Online Art Gallery. All rights reserved.</p>
             <div class="social">
-                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Facebook page">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit our Facebook page">
                     <i class="fab fa-facebook-f"></i>
                 </a>
-                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our LinkedIn profile">
+                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit our LinkedIn profile">
                     <i class="fab fa-linkedin"></i>
                 </a>
-                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visit our Instagram profile">
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
+                    aria-label="Visit our Instagram profile">
                     <i class="fab fa-instagram"></i>
                 </a>
             </div>
@@ -145,4 +152,5 @@
     </footer>
     <script src="script.js"></script>
 </body>
+
 </html>

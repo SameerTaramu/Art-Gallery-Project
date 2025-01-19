@@ -79,11 +79,15 @@ const displayAllArtworks = async () => {
       });
 
       console.log(`Rated ${selectedRating} stars for artwork ID: ${artworkId}`);
-
+      const user = getUserFromLocalStorage();
+      if (!user) {
+        alert("please login to review .")
+        return;
+      }
       try {
-        const response = await axios.post("http://localhost:3000/api/ratings", {
-          artworkId,
-          rating: selectedRating,
+        const response = await axios.post(`http://localhost:3000/api/products/${artworkId}/rate`, {
+          userId: user.userId,
+          rating: +selectedRating,
         });
         console.log("Rating saved:", response.data);
       } catch (error) {

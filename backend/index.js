@@ -5,8 +5,6 @@ const connectDb = require("./libs/db.js");
 const productRoute = require("./routes/product.route.js");
 const authRoutes = require("./routes/auth.js");
 const userRoutes = require("./routes/User.js")
-//const orderRoutes = require("./routes/order.route.js")
-const cartRoutes = require("./routes/cart.route.js")
 const bodyParser = require("body-parser");
 require("dotenv").config();
 
