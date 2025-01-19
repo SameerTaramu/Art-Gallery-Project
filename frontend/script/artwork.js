@@ -1,4 +1,3 @@
-
 const fetchAllArtworks = async () => {
   try {
     const response = await axios.get("http://localhost:3000/api/products/all");
@@ -29,7 +28,7 @@ const displayAllArtworks = async () => {
     //     <input type="number" id="quantity" name="quantity" min="1" value="1" style="width: 30px;">
     // </div>
     //     <div class="rating">
-    //       Rating: 
+    //       Rating:
     //       ${[...Array(5)]
     //         .map(
     //           (_, i) =>
@@ -53,14 +52,16 @@ const displayAllArtworks = async () => {
       ${[...Array(5)]
         .map(
           (_, i) =>
-            `<span class="star" data-value="${i + 1}" style="cursor:pointer; color:${i < Math.round(artwork.averageRating || 0) ? "gold" : "black"
+            `<span class="star" data-value="${
+              i + 1
+            }" style="cursor:pointer; color:${
+              i < Math.round(artwork.averageRating || 0) ? "gold" : "black"
             }">&#9733;</span>`
         )
         .join("")}
     </div>
   </div>
 `;
-
 
     RootDiv.innerHTML = artworkItemHtml;
     artworksContainer.insertAdjacentElement("beforeend", RootDiv);
@@ -81,21 +82,26 @@ const displayAllArtworks = async () => {
       console.log(`Rated ${selectedRating} stars for artwork ID: ${artworkId}`);
       const user = getUserFromLocalStorage();
       if (!user) {
-        alert("please login to review .")
+        alert("please login to review .");
         return;
       }
       try {
-        const response = await axios.post(`http://localhost:3000/api/products/${artworkId}/rate`, {
-          userId: user.userId,
-          rating: +selectedRating,
-        });
+        const response = await axios.post(
+          `http://localhost:3000/api/products/${artworkId}/rate`,
+          {
+            userId: user.userId,
+            rating: +selectedRating,
+          }
+        );
+
+        await displayAllArtworks();
+
         console.log("Rating saved:", response.data);
       } catch (error) {
         console.error("Error saving rating:", error);
       }
     });
   });
-
 };
 
 displayAllArtworks();
